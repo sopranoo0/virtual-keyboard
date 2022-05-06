@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #141414;
+	font-family: monospace;
+}
+
+:root {
+	--basic-key-width: calc(100vw / 20);
+	--gap: 5px;
+	--font: 22px;
+}
+
+.kb-wrap {
+	width: 90vw;
+	max-width: 90vw;
+	min-width: 800px;
+	margin: 30px auto;
+}
+
+.kb-input {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 20px;
+	height: 35vh;
+	min-height: 300px;
+	outline: none;
+	background-color: #222222;
+	color: #939393;
+	border: 1px solid #939393;
+}
+
+.kb-box {
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0 auto;
+	padding: 20px 20px 50px 20px;
+	background-color: #000000;
+	border-radius: 10px;
+	gap: 3px 5px;
+	align-items: flex-start;
+}
+
+.kb-sub {
+	text-align: left;
+	padding-top: calc(var(--basic-key-width) / 15);
+	padding-left: calc(var(--basic-key-width) / 10);
+	height: calc(var(--basic-key-width) / 3.5);
+}
+
+.kb-key {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: var(--basic-key-width);
+	min-height: 40px;
+	background-color: #312e34;
+	color: #d5d2d5;
+	text-align: center;
+	font-size: calc(var(--basic-key-width) / 3.5);
+	border-radius: 4px;
+	box-shadow: inset 0 -1px 0 #888, inset 0px 1px 1px -1px #aaa, 0px 1px 1px 0px #333;
+}
+
+.kb-key--dark {
+	background-color: #1e1d20;
+}
+
+.kb-pressed {
+	background-color: #403e42;
+	transform: scale(0.95);
+}
+
+.kb-br {
+	flex-basis: 100%;
+	height: 0px;
+}
+
+.kb-caption{
+	color: #d5d2d5;
+}
